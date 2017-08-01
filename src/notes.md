@@ -10,7 +10,7 @@
   * reset initial state
   * create new correct answer
 
-## Tuesday
+## Tuesday (Connect your Hot or Cold components)
 
 * [X] fix export default issues (with sid)
 * [ ] map state to props on each function

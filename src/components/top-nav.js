@@ -1,12 +1,14 @@
 import React from 'react';
-
+import {connect} from 'react-redux';
+import {newGuess} from '../actions';
 import './top-nav.css';
 
-export default class TopNav extends React.Component {
+export class TopNav extends React.Component {
     onNewGame(event) {
         event.preventDefault();
         if (this.props.onNewGame) {
-            this.props.onNewGame();
+            console.log('dispatched topnav')
+            this.props.dispatch(newGuess(event));
         }
     }
 
@@ -36,4 +38,4 @@ export default class TopNav extends React.Component {
         );
     }
 };
-
+export default connect()(TopNav);
