@@ -1,6 +1,6 @@
 
 const NEW_GUESS = 'NEW_GUESS';
-const addGuess = (guess, feedback) => {
+const newGuess = (guess, feedback) => {
   type: NEW_GUESS,
   guess,
   feedback
