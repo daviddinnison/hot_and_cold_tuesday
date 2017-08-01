@@ -1,5 +1,5 @@
 import React from 'react';
-import {newGuess} from '../actions';
+// import {newGuess} from '../actions';
 import {connect} from 'react-redux';
 
 //import * as actions from './actions';
@@ -13,8 +13,7 @@ const mapStateToProps = state => {
         guesses: state.guesses,
         feedback: state.feedback,
         correctAnswer: state.correctAnswer,
-        GuessCount: state.GuessCount,
-        correctAnswer: state.correctAnswer
+        guessCount: state.guessCount,
     };
 };
 

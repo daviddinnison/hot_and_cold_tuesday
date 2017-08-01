@@ -1,13 +1,13 @@
-import * as actions from './actions';
+// import {NEW_GUESS} from './actions';
 
 const initialState = {
   guesses: [],
   guessCount: 0,
-  correctAnswer: null,
   feedback: 'Make your guess!',
-  correctAnswer: function() {Math.floor(Math.random() * 100) + 1}
+  correctAnswer: Math.floor(Math.random() * 100) + 1
 };
 
+// reducer function
 export default (state = initialState, action) => {
   if (action.type === action.NEW_GUESS) {
     console.log('guess added');
@@ -18,13 +18,21 @@ export default (state = initialState, action) => {
     })
   }
 
-  // if (action.type === action.CORRECT_ANSWER) {
-  //    return state.correctAnswer: (Math.floor(Math.random() * 100) + 1)
-  // }
 
-  // if (action.type === action.RESET_STATE) {
-  //   return Object.assign({}, state, initialState)
-  // }  
+  else if (action.type === action.CORRECT_ANSWER) {
+    console.log('correct_answer triggered');
+     return Object.assign ({}, state, { 
+       correctAnswer: state.correctAnswer
+     })
+  }
+
+  else if (action.type === action.RESET_STATE) {
+    return Object.assign({}, initialState, {
+      guesses: state.guesses,
+      feedback: action.feedback,
+      correctAnswer: state.correctAnswer
+    })
+  }  
 
 return state;
 };
