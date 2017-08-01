@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {newGuess} from '../actions';
+import {newGuess, toggleWhat} from '../actions';
 import './top-nav.css';
 
 export class TopNav extends React.Component {
@@ -15,7 +15,8 @@ export class TopNav extends React.Component {
     onInfo(event) {
         event.preventDefault();
         if (this.props.onInfo) {
-            this.props.onInfo();
+            console.log('What screen dispatched');
+            this.props.dispatch(toggleWhat(event));
         }
     }
 
