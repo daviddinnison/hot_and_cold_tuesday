@@ -15,7 +15,7 @@
 * [X] fix export default issues (with sid)
 * [ ] map state to props on each function
   * [ ] what
-  * [ ] new game
+  * [X] new game
   * [ ] guess
 * [ ] test functions (maybe tomorrow)
 * [ ] check app for functionality
